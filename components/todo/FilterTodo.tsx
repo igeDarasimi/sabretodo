@@ -4,9 +4,9 @@ import AddTodo from "./AddTodo";
 import Todo from "./Todo";
 import { getData } from "@/actions";
 import Link from "next/link";
-
+import { todoProps } from "@/types";
 export default function FilterTodo() {
-  const [data, setData] = useState<Todo[]>([]);
+  const [data, setData] = useState<todoProps[]>([]);
   const [filter, setFilter] = useState<"all" | "completed" | "uncompleted">("all");
 
   // Fetch filtered data whenever the filter changes
